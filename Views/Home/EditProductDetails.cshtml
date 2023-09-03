@@ -1,0 +1,61 @@
+﻿@model ProductDetails
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit Page";
+}
+<body dir="rtl" id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+    <h1>تعديل بيانات المنتج</h1>
+    <form asp-action="UpdateProductDetails" method="post">
+        <input type="hidden" asp-for="@Model.ProductId" />
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="Description">اسم المنتج</label>
+                <input asp-for="@Model.ProductName" class="form-control" id="ProductName" name="ProductName" />
+               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="Description"> وصف المنتج</label>
+                <input asp-for="@Model.Description" class="form-control" id="Description" name="Description" />
+            </div>
+            <div class="col-sm-6">
+                <label for="Price"> سعر المنتج</label>
+                <input asp-for="@Model.Price" class="form-control" id="Price" name="Price" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="Model">  الطراز</label>
+                <input asp-for="@Model.Model" class="form-control" id="Model" name="Model" />
+            </div>
+            <div class="col-sm-6">
+                <label for="Qty"> الكمية</label>
+                <input asp-for="@Model.Qty" class="form-control" id="Qty" name="Qty" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+
+                <label for="Image">اللون</label>
+                <input asp-for="@Model.Color" class="form-control" id="Color" name="Color" />
+            </div>
+            <div class="col-sm-6">
+                <label for="Image">الصورة</label>
+                <input asp-for="@Model.Image" class="form-control" id="Image" name="Image" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label for="Display">اسم المنتج</label>
+                <input asp-for="@Model.Display" class="form-control" id="Display" name="Display" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-sm-center">
+                <button type="submit" class="btn btn-primary p-4">تعديل البيانات</button>
+            </div>
+        </div>
+    </form>
+
+</body>
